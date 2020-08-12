@@ -3,6 +3,11 @@ package fan;
 import fan.demo.Aa;
 import fan.model.FanTree;
 
+import java.util.HashMap;
+import java.util.HashSet;
+import java.util.Objects;
+import java.util.Set;
+
 /**
  * @description: 测试类
  * @author: fanfanlordship
@@ -19,7 +24,11 @@ public class Demo {
         tree.add(4, 2, new Aa(4));
         tree.add(5, 2, new Aa(5));
         tree.add(6, null, new Aa(6));
+        tree.add(7, 5, new Aa(7));
 
-        System.out.println(tree.getLeaf());
+        System.out.println("叶子：" + tree.getLeaf());
+        System.out.println("节点数量：" + tree.count());
+        System.out.println("根节点：" + tree.getRoot());
+        System.out.println("最长链路：" + tree.maxBranch());
     }
 }
